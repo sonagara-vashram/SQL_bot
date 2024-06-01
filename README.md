@@ -23,7 +23,6 @@ This is a Streamlit application that generates SQL queries based on user prompts
 
     ```bash
     git clone https://github.com/sonagara-vashram/SQL_bot.git
-    cd sql-query-generator
     ```
 
 2. **Install the required packages**:
