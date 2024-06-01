@@ -22,30 +22,23 @@ This is a Streamlit application that generates SQL queries based on user prompts
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/sql-query-generator.git
+    git clone https://github.com/sonagara-vashram/SQL_bot.git
     cd sql-query-generator
     ```
 
-2. **Create a virtual environment and activate it**:
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. **Install the required packages**:
+2. **Install the required packages**:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4. **Set up your Google API key**:
+3. **Set up your Google API key**:
 
     ```bash
     export GOOGLE_API_KEY='your_google_api_key'
     ```
 
-5. **Run the Streamlit app**:
+4. **Run the Streamlit app**:
 
     ```bash
     streamlit run app.py
