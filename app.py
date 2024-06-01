@@ -13,7 +13,7 @@ def main():
         """
         <div style="text-align: center;">
             <h1> SQL Query Generator </h1>
-            <h1> With Explaination as Well !!</h1>
+            <h1> With Explanation as Well !!</h1>
             <p> This tool is generate sql query based on your prompt. </p>
         </div>
         """,
@@ -45,20 +45,20 @@ def main():
                     ```
                         {sql_query}
                     ```
-                Provide simple tabular response with no explaination.
+                Provide simple tabular response with no explanation.
             
             """
             expected_output_formatted = expected_output.format(sql_query=sql_query)
             eoutput = model.generate_content(expected_output_formatted)
             eoutput = eoutput.text
             
-            explaination="""
+            explanation="""
                 Explain This sql Query:
                 
                     ```
                         {sql_query}
                     ```
-              Please Provide with simplest of explaination.
+              Please Provide with simplest of explanation.
             
             """
             
@@ -73,11 +73,11 @@ def main():
                 {eoutput}
 
                 ## Explanation:
-                {explaination}
+                {explanation}
                 """
-            explaination_formatted = explaination.format(sql_query=sql_query)
-            explaination = model.generate_content(explaination_formatted)
-            explaination = explaination.text
+            explanation_formatted = explanation.format(sql_query=sql_query)
+            explanation = model.generate_content(explanation_formatted)
+            explanation = explanation.text
             
             with st.container():
                 st.success('SQL Query generated successfully! Here is your quesry Below:')
@@ -86,8 +86,8 @@ def main():
                 st.success('Expected output : ')
                 st.markdown(eoutput)
                 
-                st.success('Explaination : ')
-                st.markdown(explaination)
+                st.success('Explanation : ')
+                st.markdown(explanation)
                 
                 st.download_button(
                     label="Download All Details",
