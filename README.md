@@ -1,6 +1,3 @@
-# SQL_bot
-SQL query generation chat-bot.
-
 # SQL Query Generator with Explanation
 
 This is a Streamlit application that generates SQL queries based on user prompts using Google's Generative AI (Gemini-1.5-pro). The application not only generates the SQL query but also provides the expected output and a simple explanation of the query.
@@ -22,7 +19,42 @@ This is a Streamlit application that generates SQL queries based on user prompts
 
 ### Steps
 
-1. Clone the repository:
+1. **Clone the repository**:
 
-```bash
-git clone https://github.com/sonagara-vashram/SQL_bot.git
+    ```bash
+    git clone https://github.com/yourusername/sql-query-generator.git
+    cd sql-query-generator
+    ```
+
+2. **Create a virtual environment and activate it**:
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. **Install the required packages**:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Set up your Google API key**:
+
+    ```bash
+    export GOOGLE_API_KEY='your_google_api_key'
+    ```
+
+5. **Run the Streamlit app**:
+
+    ```bash
+    streamlit run app.py
+    ```
+
+## Usage
+
+1. Enter your query prompt in the text area.
+2. Click the "Generate SQL Query" button.
+3. Wait for the SQL query, expected output, and explanation to be generated.
+4. View the generated SQL query, expected output, and explanation on the web page.
+5. Download the details as a `.sql` file if needed.
